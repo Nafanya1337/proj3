@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  web:
+    image: nafanya13371337/flask-app-shmakov:latest
+    container_name: flask-app
+    ports:
+      - "8080:8080"
+    environment:
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+    depends_on:
+      - redis
+    networks:
+      - flask-net
+    restart: always
+
+  redis:
+    image: redis:7-alpine
+    container_name: redis-container
+    networks:
+      - flask-net
+    restart: always
+
+networks:
+  flask-net:
+    driver: bridge

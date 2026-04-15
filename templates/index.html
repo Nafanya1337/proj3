@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="card">
+        <div class="badge">Docker + Flask</div>
+        <h1>Hello, Docker!</h1>
+        <p class="subtitle">
+	Моё крутое приложение
+        </p>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-label">Количество посещений</div>
+                <div class="stat-value">{{ visits }}</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Время запроса</div>
+                <div class="stat-value">{{ current_time }}</div>
+            </div>
+        </div>
+
+        <div class="details">
+            <div class="row">
+                <div class="row-key">IP клиента</div>
+                <div class="row-value">{{ client_ip }}</div>
+            </div>
+            <div class="row">
+                <div class="row-key">User-Agent</div>
+                <div class="row-value">{{ user_agent }}</div>
+            </div>
+            <div class="row">
+                <div class="row-key">Redis</div>
+                <div class="row-value">
+                    {% if redis_available %}
+                        <span class="status-ok">Подключён</span>
+                    {% else %}
+                        <span class="status-warn">Недоступен</span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Студент Шмаков Ф.М. БСМО-31-25
+        </div>
+    </div>
+</body>
+</html>

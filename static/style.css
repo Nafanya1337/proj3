@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background:
+        radial-gradient(circle at top left, #3b82f6 0%, transparent 30%),
+        radial-gradient(circle at bottom right, #06b6d4 0%, transparent 30%),
+        linear-gradient(135deg, #0f172a, #111827, #1e293b);
+    color: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.card {
+    width: 100%;
+    max-width: 760px;
+    background: rgba(17, 24, 39, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(14px);
+    padding: 32px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    background: rgba(59, 130, 246, 0.16);
+    color: #93c5fd;
+    border: 1px solid rgba(147, 197, 253, 0.22);
+    margin-bottom: 18px;
+}
+
+h1 {
+    margin: 0 0 10px 0;
+    font-size: 38px;
+    line-height: 1.1;
+    color: #ffffff;
+}
+
+.subtitle {
+    margin: 0 0 28px 0;
+    color: #cbd5e1;
+    font-size: 17px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 26px;
+}
+
+.stat {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: 800;
+    color: #f8fafc;
+    word-break: break-word;
+}
+
+.details {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 18px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.row:last-child {
+    border-bottom: none;
+}
+
+.row-key {
+    color: #93c5fd;
+    font-weight: 700;
+}
+
+.row-value {
+    color: #e2e8f0;
+    word-break: break-word;
+}
+
+.footer {
+    margin-top: 22px;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.status-ok {
+    color: #86efac;
+    font-weight: 700;
+}
+
+.status-warn {
+    color: #fcd34d;
+    font-weight: 700;
+}
